@@ -31,7 +31,12 @@ function getHumanChoice() {
 getHumanChoice();
 let adjustedHumanChoice = humanChoice.toLowerCase(); //Define variable to change and store human choice as lower case string
 
-function checkHumanChoice () {}   //Check that the user entered choice matches the 3 move options, if it does not show the move prompt again
+function checkHumanChoice() {   //Check that the user entered choice matches the 3 move options, if it does not show the move prompt again
+    if ((adjustedHumanChoice != rock) && (adjustedHumanChoice != paper) && (adjustedHumanChoice != scissors) ) {
+        getHumanChoice();
+        adjustedHumanChoice = humanChoice.toLowerCase;}
+    }
+}
 
 getComputerChoice()                                                                  //Generate computers move choice based on random move selection
 console.log(`Computer chose ${computerChoice}. You chose ${humanChoice}.`);          //Display message with both move choices to user 

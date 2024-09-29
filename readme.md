@@ -13,7 +13,7 @@ Desired Output: Score is calculated each round and tracked separately for human 
 
 Pseudocode: 
 
-Store move as a string variable 
+Store move for computer player and human computer as a string variable 
 Store a string variable for computers move choice
 Randomly generate computers move selection from the three options
 Store string variable for humans move choice using prompt that 
