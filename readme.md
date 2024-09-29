@@ -19,7 +19,7 @@ Randomly generate computers move selection from the three options
 Store string variable for humans move choice using prompt that 
 asks for 1 of 3 move types 'rock', 'paper', and 'scissor'. 
 Enter R for Rock, Enter P for Paper, Enter S for scissor
-Compare move choices of human vs computer to determine winner of current round - Paper beats rock, Rock beats Scissors, Scissors beats paper
+Compare move choices of human vs computer to determine winner of current round  Paper beats rock, Rock beats Scissors, Scissors beats paper
 When Human wins store human score in integer variable starting at 0, increment by 1 for each win.
 When Computer wins store computer score in integer variable starting at 0 for the computer score, increment by 1 for each win
 Count the round number at an integer variable starting at 0 
