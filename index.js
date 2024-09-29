@@ -1,5 +1,5 @@
-let computerChoice;      //Define variable for computer move choice
-let humanChoice;         //Define variable for human move choice
+let computerChoice;      //Define variable to store computer move choice
+let humanChoice;
 
 const rock = "rock";      //Create variables naming each move as a string
 const paper = "paper";
@@ -22,43 +22,67 @@ function getComputerChoice() {
 
 /* Ask human player for their move selection
 Enter String of either R, P, or S */
-humanChoice = prompt(`Enter your move for Rock Paper Scissors, type in Rock, Paper, or Scissors`);
-console.log(typeof humanChoice);
-let adjustedHumanChoice = humanChoice.toLowerCase();
-console.log(adjustedHumanChoice);
 
-getComputerChoice() //Generate computers move choice based on random move selection
-console.log(`Computer chose ${computerChoice}. You chose ${humanChoice}.`);
+ 
+function getHumanChoice() {
+    return humanChoice = prompt(`Enter your move for Rock Paper Scissors, type in Rock, Paper, or Scissors`);
+    }
+}
+getHumanChoice();
+let adjustedHumanChoice = humanChoice.toLowerCase(); //Define variable to change and store human choice as lower case string
 
-let humanPoint = 0;  //Start both players with 0 point count
-let computerPoint = 0; 
+function checkHumanChoice () {}   //Check that the user entered choice matches the 3 move options, if it does not show the move prompt again
+
+getComputerChoice()                                                                  //Generate computers move choice based on random move selection
+console.log(`Computer chose ${computerChoice}. You chose ${humanChoice}.`);          //Display message with both move choices to user 
+
+let humanPoint = 0;  
+let computerPoint = 0;   //Start both players with 0 point count and store the point count 
 let currentHumanScore;  //Store number calculating current Human score
 let currentComputerScore;  //Store number calculating current Computer score
+
+if ((currentHumanScore = `0`)|| (currentComputerScore = `0`)) {   //Set both starting scores to 0 
+    let startingComputerScore = `0`;
+    currentComputerScore = startingComputerScore;
+    let startingHumanScore = `0`
+    currentHumanScore = startingHumanScore
+}
 
 /* Compare the move choices of both players to determine winner of the 
 current round. Rules for the outcome are that paper beats rock, rock beats
 scissors, and scissors beats paper */
 
-function playRound (humanChoice, computerChoice) { 
-    if ((humanChoice === rock && computerChoice === rock)
-        || (humanChoice === paper && computerChoice === paper)
-        || (humanChoice === scissors && computerChoice === scissors)) {
+function showWinner(adjustedHumanChoice, computerChoice) { 
+    if ((adjustedHumanChoice === rock && computerChoice === rock)
+        || (adjustedHumanChoice === paper && computerChoice === paper)
+        || (adjustedHumanChoice === scissors && computerChoice === scissors)) {
                 console.log(`Tie result, better luck next round! The score is ${currentHumanScore} Human Player vs ${currentComputerScore} Computer Score`);
-        } else if ((humanChoice === rock && computerChoice === scissors)
-        || (humanChoice === paper && computerChoice === rock)
-        || (humanChoice === scissors && computerChoice === paper)) { 
+        } else if ((adjustedHumanChoice === rock && computerChoice === scissors)
+        || (adjustedHumanChoice === paper && computerChoice === rock)
+        || (adjustedHumanChoice === scissors && computerChoice === paper)) { 
                 currentHumanScore = ++humanPoint;
                 console.log(`You beat the computer! The score is ${currentHumanScore} Human Player vs ${currentComputerScore} Computer Score`);
-       } else if ((humanChoice === rock && computerChoice === paper)
-        || (humanChoice === paper && computerChoice === scissors)
-        || (humanChoice === scissors && computerChoice === rock)) {
+       } else if ((adjustedHumanChoice === rock && computerChoice === paper)
+        || (adjustedHumanChoice === paper && computerChoice === scissors)
+        || (adjustedHumanChoice === scissors && computerChoice === rock)) {
                 currentComputerScore = ++computerPoint;
                 console.log(`You LOSE this round! The score is ${currentHumanScore} Human Player vs ${currentComputerScore} Computer Score`);
 }
 }
 
-function playGame() {
-for (let currentRound = 0; currentRound <= 5; currentRound++) {  //Create round counter for duration of 5 total round game
-    if roundWinner()
-}
-}
+showWinner(adjustedHumanChoice, computerChoice); 
+
+function playRound() {     //Create function to call start a round
+    getComputerChoice();
+    getHumanChoice();
+    showWinner();
+}                                                               //Function to start a round
+
+
+// function playGame() {
+// for (let currentRound = 0; currentRound <= 5; currentRound++) {  //Create round counter for duration of 5 total round game
+    // if currentRound = 0 {
+
+    // }
+// }
+// }
