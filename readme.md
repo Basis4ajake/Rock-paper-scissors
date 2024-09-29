@@ -7,7 +7,7 @@ This is a project to test basic javascript knowledge by building a command line 
 
 Plan: Create a rock paper scissors game vs a computer player. Computer player will randomly choose its' move each round. The game will go for five rounds and keep a score count for both players. A winner will be displayed after round 5. Prompt user if they want to reset the game to play again at the end of the final round.
 
-Needed inputs: 3 Move types [Rock, paper, and scissor], Computers choice of move, Humans choice of move using prompt, score data - human and computer, Score is calculated by winner per round. 5 Total rounds
+Needed inputs: 3 Move types [Rock, paper, and scissor], Computers choice of move, Humans choice of move using a prompt, score data - human and computer, Score is calculated by winner per round. 5 Total rounds
 
 Desired Output: Score is calculated each round and tracked separately for human score and computer score. Game ends at 5 rounds. Winner is declared at end of game.
 
