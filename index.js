@@ -26,19 +26,21 @@ Enter String of either R, P, or S */
  
 function getHumanChoice() {
     return humanChoice = prompt(`Enter your move for Rock Paper Scissors, type in Rock, Paper, or Scissors`);
-    }
 }
-getHumanChoice();
+
+getHumanChoice()
 let adjustedHumanChoice = humanChoice.toLowerCase(); //Define variable to change and store human choice as lower case string
 
-function checkHumanChoice() {   //Check that the user entered choice matches the 3 move options, if it does not show the move prompt again
-    if ((adjustedHumanChoice != rock) && (adjustedHumanChoice != paper) && (adjustedHumanChoice != scissors) ) {
-        getHumanChoice();
-        adjustedHumanChoice = humanChoice.toLowerCase;}
-    }
-}
+function checkHumanChoice() {
+    do {
+    alert(`Entered move ${adjustedHumanChoice} is invalid, make sure to type rock, paper, or scissors only`);
+    getHumanChoice()
+    adjustedHumanChoice = humanChoice.toLowerCase();
+    } while ((adjustedHumanChoice != rock) && (adjustedHumanChoice != paper) && (adjustedHumanChoice != scissors));
 
-getComputerChoice()                                                                  //Generate computers move choice based on random move selection
+checkHumanChoice()
+
+getComputerChoice()                                                              //Generate computers move choice based on random move selection
 console.log(`Computer chose ${computerChoice}. You chose ${humanChoice}.`);          //Display message with both move choices to user 
 
 let humanPoint = 0;  
@@ -78,16 +80,14 @@ function showWinner(adjustedHumanChoice, computerChoice) {
 showWinner(adjustedHumanChoice, computerChoice); 
 
 function playRound() {     //Create function to call start a round
-    getComputerChoice();
-    getHumanChoice();
-    showWinner();
+    getComputerChoice()
+    getHumanChoice()
+    checkHumanChoice()
+    showWinner(adjustedHumanChoice, computerChoice)
 }                                                               //Function to start a round
+
 
 
 // function playGame() {
 // for (let currentRound = 0; currentRound <= 5; currentRound++) {  //Create round counter for duration of 5 total round game
-    // if currentRound = 0 {
-
-    // }
-// }
-// }
+    function playGame() {};
