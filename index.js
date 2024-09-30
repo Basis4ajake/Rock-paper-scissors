@@ -94,4 +94,17 @@ function playRound() {     //Create function to call start a round
     checkHumanChoice()
     displayMoveChoices()
     showWinner(adjustedHumanChoice, computerChoice)
-}                                                               //Function to start a round
+}
+
+
+function playGame () {                                                  //Start five round game
+    for (currentRound = 0; currentRound < 6; ++currentRound) {
+        if (currentRound == 6) {
+          continue;
+        }
+    playRound()
+    } 
+}
+
+playGame()
+console.log(`GAME COMPLETE - Score is ${currentHumanScore} Human Player to ${currentComputerScore} Computer Player. Great job`)
