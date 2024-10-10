@@ -5,6 +5,9 @@ const rock = "rock";      //Create variables naming each move as a string
 const paper = "paper";
 const scissors = "scissors";
 
+const rockChoice = document.querySelector(".rock.btn")
+const paperChoice = document.querySelector()
+const scissorsChoice = document.querySelector()
 /* Randomly generate computers move selection out of
 the 3 move types - rock, paper, and scissor. Generates a random number
 between 0 and 1, then based on the number generated decides the move */
@@ -20,33 +23,6 @@ function getComputerChoice() {
     }
 }
 
-/* Ask human player for their move selection
-Enter String of either R, P, or S */
-
-
-function getHumanChoice() {
-    return humanChoice = prompt(`Enter your move for Rock Paper Scissors, type in Rock, Paper, or Scissors`);
-    }
-
-function adjustHumanChoice() {
-    return adjustedHumanChoice = humanChoice.toLowerCase(); 
-}
-
-/*Gets Human Choice, converts to all lower case for validation, checks if answer is not rock, paper or scissors. 
-If not, prompts again until valid answer has been entered*/
-
-function askHumanChoice(){
-    getHumanChoice()
-    adjustHumanChoice()
-}
-
-function checkHumanChoice() {      
-    while ((adjustedHumanChoice != rock) && (adjustedHumanChoice != paper) && (adjustedHumanChoice != scissors)) {   
-        alert(`Entered move ${adjustedHumanChoice} is invalid, make sure to type rock, paper, or scissors only`)
-        getHumanChoice()
-        adjustHumanChoice()    
-        };
-}
 
 function displayMoveChoices() {
 console.log(`Computer chose ${computerChoice}. You chose ${humanChoice}.`);          //Display message with both move choices to user 
