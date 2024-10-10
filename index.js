@@ -73,7 +73,7 @@ function showWinner(adjustedHumanChoice, computerChoice) {
     if ((adjustedHumanChoice === rock && computerChoice === rock)
         || (adjustedHumanChoice === paper && computerChoice === paper)
         || (adjustedHumanChoice === scissors && computerChoice === scissors)) {
-                console.log(`Tie result, better luck next round! The score is ${currentHumanScore} Human Player vs ${currentComputerScore} Computer Score`);
+            console.log(`Tie result, better luck next round! The score is ${currentHumanScore} Human Player vs ${currentComputerScore} Computer Score`);
         } else if ((adjustedHumanChoice === rock && computerChoice === scissors)
         || (adjustedHumanChoice === paper && computerChoice === rock)
         || (adjustedHumanChoice === scissors && computerChoice === paper)) { 
@@ -98,10 +98,7 @@ function playRound() {     //Create function to call start a round
 
 
 function playGame () {                                                  //Start five round game
-    for (currentRound = 0; currentRound < 6; ++currentRound) {
-        if (currentRound == 6) {
-          continue;
-        }
+    // for (currentRound = 0; currentRound < 6; ++currentRound) {
     playRound()
     } 
 }
