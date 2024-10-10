@@ -70,9 +70,7 @@ current round. Rules for the outcome are that paper beats rock, rock beats
 scissors, and scissors beats paper */
 
 function showWinner(adjustedHumanChoice, computerChoice) { 
-    if ((adjustedHumanChoice === rock && computerChoice === rock)
-        || (adjustedHumanChoice === paper && computerChoice === paper)
-        || (adjustedHumanChoice === scissors && computerChoice === scissors)) {
+    if (adjustedHumanChoice === computerChoice) {
             console.log(`Tie result, better luck next round! The score is ${currentHumanScore} Human Player vs ${currentComputerScore} Computer Score`);
         } else if ((adjustedHumanChoice === rock && computerChoice === scissors)
         || (adjustedHumanChoice === paper && computerChoice === rock)
@@ -101,7 +99,7 @@ function playGame () {                                                  //Start 
     // for (currentRound = 0; currentRound < 6; ++currentRound) {
     playRound()
     } 
-}
+
 
 playGame()
 console.log(`GAME COMPLETE - Score is ${currentHumanScore} Human Player to ${currentComputerScore} Computer Player. Great job`)
