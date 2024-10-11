@@ -10,7 +10,25 @@ const rockChoice = document.querySelector(".rock.btn")
 const paperChoice = document.querySelector('.paper.btn')
 const scissorsChoice = document.querySelector('.scissor.btn')
 
-container.addEventL
+
+container.addEventListener("click", (move) => {
+    let target = move.target;
+
+    switch(target.id) {
+        case 'rock':
+            humanChoice = rock;
+            console.log(humanChoice)
+=        break;
+        case 'paper':
+            humanChoice = paper;
+            console.log(humanChoice)
+        break;
+        case 'scissors':
+            humanChoice = scissors;
+            console.log(humanChoice)
+        break;
+    }
+})
 
 /* Randomly generate computers move selection out of
 the 3 move types - rock, paper, and scissor. Generates a random number
@@ -65,5 +83,3 @@ function playGame () {
     playRound()
     } 
 
-
-playGame()
