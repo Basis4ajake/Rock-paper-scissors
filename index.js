@@ -1,13 +1,17 @@
 let computerChoice;      //Define variable to store computer move choice
-let adjustedHumanChoice;
+let humanChoice
 
 const rock = "rock";      //Create variables naming each move as a string
 const paper = "paper";
 const scissors = "scissors";
 
+const container = document.querySelector(".container")
 const rockChoice = document.querySelector(".rock.btn")
-const paperChoice = document.querySelector()
-const scissorsChoice = document.querySelector()
+const paperChoice = document.querySelector('.paper.btn')
+const scissorsChoice = document.querySelector('.scissor.btn')
+
+container.addEventL
+
 /* Randomly generate computers move selection out of
 the 3 move types - rock, paper, and scissor. Generates a random number
 between 0 and 1, then based on the number generated decides the move */
@@ -25,19 +29,7 @@ function getComputerChoice() {
 
 
 function displayMoveChoices() {
-console.log(`Computer chose ${computerChoice}. You chose ${humanChoice}.`);          //Display message with both move choices to user 
-}
-
-let humanPoint = 0;  
-let computerPoint = 0;   //Start both players with 0 point count and store the point count 
-let currentHumanScore;  //Store number calculating current Human score
-let currentComputerScore;  //Store number calculating current Computer score
-
-if ((currentHumanScore = `0`)|| (currentComputerScore = `0`)) {   //Set both starting scores to 0 
-    let startingComputerScore = `0`;
-    currentComputerScore = startingComputerScore;
-    let startingHumanScore = `0`
-    currentHumanScore = startingHumanScore
+console.log(`Computer chose ${computerChoice}. You chose ${humanChoice}.`);         
 }
 
 
@@ -64,18 +56,14 @@ function showWinner(adjustedHumanChoice, computerChoice) {
 
 function playRound() {     //Create function to call start a round
     getComputerChoice()
-    askHumanChoice()
-    checkHumanChoice()
     displayMoveChoices()
     showWinner(adjustedHumanChoice, computerChoice)
 }
 
 
-function playGame () {                                                  //Start five round game
-    // for (currentRound = 0; currentRound < 6; ++currentRound) {
+function playGame () {                                               
     playRound()
     } 
 
 
 playGame()
-console.log(`GAME COMPLETE - Score is ${currentHumanScore} Human Player to ${currentComputerScore} Computer Player. Great job`)
