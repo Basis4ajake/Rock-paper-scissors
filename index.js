@@ -7,7 +7,13 @@ const rock = "rock";      //Create variables naming each move as a string
 const paper = "paper";
 const scissors = "scissors";
 
+const body = document.querySelector("body")
+body.setAttribute("style", "display:flex; justify-content: center; align-items: center; flex-flow: column; height: 35rem;")
+
+
 const container = document.querySelector(".container")
+container.setAttribute("style", "display: flex; justify-content: center; align-items: center; flex-flow: column;")
+
 const rockChoice = document.querySelector(".rock.btn")
 const paperChoice = document.querySelector('.paper.btn')
 const scissorsChoice = document.querySelector('.scissor.btn')
@@ -17,6 +23,7 @@ const scoreCount = document.createElement("div")
 scoreCount.classList.toggle("scoreCount");
 scoreCount.textContent = `Your score is ` + humanPoint + ` and the computer score is ` + computerPoint + `!`;
 results.append(scoreCount);
+
 
 
 
