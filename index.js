@@ -96,6 +96,13 @@ function playRound() {     //Create function to call start a round
     for (let i = 0; i < 5; i++){
         let totalPoints = computerPoint + humanPoint;
         if (totalPoints === 5){
+                if (humanPoint > computerPoint) {
+                    let amountCrushedBy = humanPoint - computerPoint;
+                    alert(`You WIN!!! OH YEAH!!! You won by ${amountCrushedBy} points`)
+                } else { 
+                    amountCrushedBy = computerPoint - humanPoint;
+                    alert(`YOU LOSE, GOOD DAY SIR! Crushed by a whopping ${amountCrushedBy} points`)
+                }
             humanPoint = 0;
             computerPoint = 0;
             i = 0;
